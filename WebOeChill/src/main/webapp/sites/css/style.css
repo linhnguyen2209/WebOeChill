@@ -1,0 +1,393 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --page-color: #111319;
+    --primary-color: #1ad468;
+    --text-color: rgba(255, 255, 255, 0.895);
+    --text-orange: #FF4F18;
+}
+
+body p,
+span,
+li {
+    color: var(--text-color);
+}
+
+body .title {
+    color: white;
+}
+
+/* _______________HEADER_______________ */
+
+body header {
+    background-color: var(--page-color);
+}
+
+header .navbar {
+    padding: 0 60px;
+    transition: 0.5s;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
+header .navbar.nav-noScroll {
+    background: transparent;
+    box-shadow: inset 0px 50px 25px -5px rgba(0, 0, 0, 0.468);
+}
+
+header .navbar.nav-scrolling {
+    background: black;
+}
+
+header .navbar .logo {
+    color: var(--primary-color);
+    text-shadow: 0px 0px 2px var(--primary-color);
+}
+
+header .navbar form {
+    background-color: #84868fa2;
+}
+
+.navbar form input[type="search"] {
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    color: rgb(205, 197, 197);
+    font-size: 16px;
+}
+
+.navbar form .btn {
+    outline: 0;
+    border: none;
+    color: white;
+}
+
+.navbar form .btn i {
+    transition: 0.3s;
+}
+
+.navbar form .btn:hover i {
+    color: var(--primary-color);
+}
+
+::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: rgb(205, 197, 197);
+}
+
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: rgb(205, 197, 197);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: rgb(205, 197, 197);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: rgb(205, 197, 197);
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: rgb(205, 197, 197);
+}
+
+::placeholder {
+    /* Most modern browsers support this now. */
+    color: rgb(205, 197, 197);
+}
+
+.navbar .logo span {
+    color: var(--text-orange);
+}
+
+.navbar .nav-item {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .nav-item .nav-link {
+    color: var(--text-color);
+    text-shadow: 0px 0px 1px var(--text-color);
+    font-size: 17px;
+}
+
+.navbar .nav-item .nav-link.active {
+    color: var(--primary-color);
+    text-shadow: 0px 0px 1px var(--primary-color);
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: var(--primary-color);
+    text-shadow: 0px 0px 1px var(--primary-color);
+}
+
+.navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    top: 50px;
+}
+
+.dropdown .dropdown-menu {
+
+    background-color: var(--page-color);
+    border: 1px solid rgb(136, 129, 129);
+}
+
+.dropdown .dropdown-menu .dropdown-item {
+    color: var(--text-color);
+}
+
+.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #413d3d;
+}
+
+.carousel .carousel-inner .carousel-caption {
+    left: 75px;
+    bottom: 60px;
+    z-index: 9;
+}
+
+.carousel-caption .box__hot .box__left .item-1 {
+    font-weight: bold;
+    border-radius: 2px 0px 0px 2px;
+    background: var(--primary-color);
+}
+
+.box__hot .box__left .item-2 {
+    font-weight: bold;
+    border-radius: 0px 2px 2px 0px;
+    background: rgba(255, 255, 255, 0.359);
+}
+
+.box__hot .box__right {
+    margin: auto;
+    background: rgb(240, 220, 137);
+    border-radius: 2px;
+}
+
+.carousel-caption .box__info .vertical__brick {
+    background: rgba(255, 255, 255, 0.544);
+    width: 2px;
+    height: 13px;
+}
+
+.carousel-caption .box__category .category__item {
+    background-color: rgba(255, 255, 255, 0.197);
+    color: rgba(255, 255, 255, 0.774);
+    border-radius: 2px;
+}
+
+.carousel-caption .box__btn .btn__watch:hover {
+    background-color: #299657 !important;
+}
+
+.carousel-caption .box__btn .btn__like:hover {
+    opacity: 0.8;
+}
+
+.carousel:hover .btn__control {
+    opacity: 1;
+}
+
+.carousel .carousel-control-prev {
+    transform: translateX(15px);
+}
+
+.carousel .carousel-control-next {
+    transform: translateX(-15px);
+}
+
+.carousel .btn__control {
+    opacity: 0.2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.carousel .btn__control:hover {
+    background-color: var(--primary-color);
+    color: #ffff;
+}
+
+/* _______________MAIN_______________ */
+body main {
+    background-color: var(--page-color);
+}
+
+main section {
+    /* background-color: rgb(241, 245, 214); */
+    padding: 40px 75px ;
+}
+
+section .carousel:hover .btn__control-slide {
+    opacity: 1;
+}
+
+section .carousel .carousel-control-prev {
+    transform: translateX(-60px);
+    top: -50px;
+}
+
+section .carousel .carousel-control-next {
+    transform: translateX(60px);
+    top: -50px;
+}
+
+section .carousel .btn__control-slide {
+    opacity: 0.2;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+main .section-1{
+    z-index: 1;
+    box-shadow: 0 0px 20px 20px var(--page-color);
+}
+
+main section .card{
+    background-color: transparent;
+}
+main section .card .card__head {
+    position: relative;
+}
+
+section .card .card__head .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000078;
+    transition: all 0.3s;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section .card .card__head .overlay .btn{
+    background: rgba(111, 101, 101, 0.587);
+    border-radius: 30px;
+    border: 1px solid rgb(140, 200, 30);
+    opacity: 1;
+    transform: translateY(20px);
+    transition: all 0.3s;
+    padding: 3px 10px;
+}
+
+section .card:hover>.card__head>.overlay {
+    opacity: 1;
+}
+
+section .card:hover>.card__head>.overlay>.btn {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+section .card .card__body .card__title {
+    color: var(--text-color);
+}
+section .card .card__body small {
+    color: var(--text-color);
+}
+
+#watched__videos{
+    scroll-margin-top: 100px; /* Đặt khoảng cách là 100px */
+}
+
+#animation__videos{
+    scroll-margin-top: 100px;
+}
+
+section .pagination .page-link {
+    background-color: transparent;
+}
+
+section .pagination .page-link:hover {
+    background-color: var(--primary-color);
+}
+
+section .pagination .page-link.active {
+    background-color: var(--primary-color);
+}
+/* _______________FOOTER_______________ */
+
+footer {
+    padding: 30px;
+}
+
+footer .footernav p,
+.footernav li,
+.footernav div,
+.footernav a {
+    color: #ffffff8d;
+    text-decoration: none;
+}
+
+.footernav a {
+    display: block;
+    padding: 3px 0px;
+    transition: all 0.3s;
+}
+
+.footernav a:hover {
+    color: #ffffff;
+}
+
+.footernav .box__icon a {
+    color: var(--primary-color);
+}
+
+.footernav .box__icon a:hover {
+    color: #4c5e37;
+}
+
+.footernav .icon__tiktok {
+    transition: all 0.3s;
+}
+
+.footernav .icon__tiktok:hover {
+    transform: rotateY(360deg);
+}
+
+body .btn__go-up {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgba(197, 187, 187, 0.474);
+    bottom: 20px;
+    right: 15px;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+.btn__go-up i {
+    color: #ffffff6e;
+    transition: all 0.3s;
+}
+
+.btn__go-up:hover {
+    background: var(--primary-color);
+    box-shadow: 0px 0px 10px #000000;
+    border: 2px solid black;
+}
+
+.btn__go-up:hover i {
+    color: #000000;
+}
